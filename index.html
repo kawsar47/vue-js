@@ -1,0 +1,25 @@
+<html>
+   <head>
+      <title>VueJs Components</title>
+       <script type = "text/javascript" src = "https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+   </head>
+   <body>
+       <div id = "component_test">
+         <testcomponent></testcomponent>
+      </div>
+      <div id = "component_test1">
+         <testcomponent></testcomponent>
+      </div>
+      <script type = "text/javascript">
+        Vue.component('testcomponent',{
+         template : '<div><h1>This is coming from component</h1></div>'
+         });
+        var vm = new Vue({
+         el: '#component_test'
+      });
+        var vm1 = new Vue({
+         el: '#component_test1'
+      });
+      </script>
+   </body>
+</html>
